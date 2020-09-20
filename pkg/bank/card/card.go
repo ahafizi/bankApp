@@ -1,6 +1,6 @@
 package card
 
-import "bank/pkg/bank/types"
+import "github.com/ahafizi/bankapp/pkg/bank/types"
 
 func PaymentSources(cards []types.Card) (paymentSource []types.PaymentSource)  {
 
@@ -21,4 +21,16 @@ func PaymentSources(cards []types.Card) (paymentSource []types.PaymentSource)  {
 	}
 
 	return paymentSource
+}
+
+func Issue(currency types.Currency, color string, name string) types.Card {
+	return types.Card{
+		ID: 1000,
+		PAN: "5058 xxxx xxxx 0001",
+		Balance: 0,
+		Currency: currency,
+		Color: color,
+		Name: name,
+		Active: true,
+	}
 }
