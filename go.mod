@@ -1,3 +1,3 @@
-module bankapp
+module bank
 
 go 1.15
