@@ -7,6 +7,9 @@ import (
 func Avg(payments []types.Payment) types.Money {
 	sum := 0
 	countOfPayments := len(payments)
+	if countOfPayments == 0 {
+		return types.Money(0)
+	}
 	for _, payment := range payments {
 		sum += int(payment.Amount)
 	}
