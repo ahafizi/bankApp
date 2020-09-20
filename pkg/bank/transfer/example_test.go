@@ -23,8 +23,10 @@ func ExamplePaymentSources() {
 		},
 	}
 
-	fmt.Println(PaymentSources(cards))
+	for _, payment := range PaymentSources(cards) {
+		fmt.Println(payment.Number)
+	}
 
 	// Output:
-	// [{card 5058270280030403 100000}]
+	// 5058270280030403
 }
