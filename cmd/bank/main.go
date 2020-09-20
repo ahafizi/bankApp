@@ -1,1 +1,5 @@
-package bank
+package main
+
+func main() {
+
+}

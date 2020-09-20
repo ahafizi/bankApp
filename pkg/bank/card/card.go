@@ -1,6 +1,6 @@
-package transfer
+package card
 
-import "bank/pkg/types"
+import "bank/pkg/bank/types"
 
 func PaymentSources(cards []types.Card) (paymentSource []types.PaymentSource)  {
 
