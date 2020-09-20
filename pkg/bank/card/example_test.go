@@ -2,7 +2,7 @@ package card
 
 import (
 	"fmt"
-	"github.com/ahafizi/bankapp/pkg/bank/types"
+	"github.com/ahafizi/bank/pkg/bank/types"
 )
 
 func ExamplePaymentSources_allIsGood() {

@@ -1,6 +1,6 @@
 package card
 
-import "github.com/ahafizi/bankapp/pkg/bank/types"
+import "github.com/ahafizi/bank/pkg/bank/types"
 
 func PaymentSources(cards []types.Card) (paymentSource []types.PaymentSource)  {
 
