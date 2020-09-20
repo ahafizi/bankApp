@@ -30,7 +30,7 @@ func ExampleAvg() {
 	// 25000
 }
 
-func ExampleTotalInCategory() {
+func ExampleTotalInCategory_allIsGood() {
 	payments := []types.Payment{
 		{
 			ID: 1,
@@ -54,8 +54,38 @@ func ExampleTotalInCategory() {
 		},
 	}
 
-	fmt.Println(TotalInCategory(payments, "dresss"))
+	fmt.Println(TotalInCategory(payments, "dress"))
 
 	// Output:
-	// 250_00
+	// 100000
+}
+
+func ExampleTotalInCategory_notInCategory() {
+	payments := []types.Payment{
+		{
+			ID: 1,
+			Amount: 100_00,
+			Category: "shirt",
+		},
+		{
+			ID: 2,
+			Amount: 150_00,
+			Category: "jacket",
+		},
+		{
+			ID: 3,
+			Amount: 500_00,
+			Category: "dress",
+		},
+		{
+			ID: 4,
+			Amount: 500_00,
+			Category: "dress",
+		},
+	}
+
+	fmt.Println(TotalInCategory(payments, "test"))
+
+	// Output:
+	// 0
 }
